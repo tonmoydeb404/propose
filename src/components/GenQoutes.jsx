@@ -8,7 +8,7 @@ const GenQoutes = ({ className = '', texts = [] }) => {
         if (qouteRef && texts.length) {
             const postion = qouteRef.current.getBoundingClientRect();
             if (window.outerHeight < postion.bottom + 200) {
-                window.scrollTo(0, postion.bottom + 200);
+                window.scrollTo(0, postion.bottom + 500);
                 console.log('first');
             }
             console.log('body', window.outerHeight);
