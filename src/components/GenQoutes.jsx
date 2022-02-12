@@ -7,9 +7,12 @@ const GenQoutes = ({ className = '', texts = [] }) => {
     useEffect(() => {
         if (useDummyScroll && texts.length) {
             const postion = useDummyScroll.current.getBoundingClientRect();
-            window.scrollTo(0, postion.top - 30);
+            if (window.innerHeight < postion.top + 50) {
+                window.scrollTo(0, postion.top - 30);
 
-            // console.log(postion.top - 30);
+                // console.log('body', window.innerHeight);
+                // console.log('scroll', postion.top);
+            }
         }
     }, [useDummyScroll, texts]);
 
