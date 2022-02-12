@@ -7,6 +7,10 @@
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
@@ -110,7 +114,6 @@ body {
   position: fixed;
   left: 0;
   top: 0;
-  min-height: 100vh;
   width: 45%;
   background-image: var(--image);
   background-repeat: no-repeat;
@@ -162,8 +165,14 @@ body {
     pointer-events: none;
     background-color: #000;
   }
+  .proposal_title {
+    font-size: 24px;
+  }
   .proposal_subtitle {
     opacity: 0.8;
+  }
+  .proposal_content {
+    min-height: 100vh;
   }
   .proposal .main-content {
     min-height: 200px;
@@ -176,6 +185,7 @@ body {
   }
   .proposal .main-content .card.last {
     border: none;
+    margin-bottom: 50px;
   }
   .proposal .main-content .card:not(.last) {
     background-color: rgba(255, 255, 255, 0.15);

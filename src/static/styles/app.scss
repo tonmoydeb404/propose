@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
@@ -108,7 +112,6 @@ body {
     position: fixed;
     left: 0;
     top: 0;
-    min-height: 100vh;
     width: 45%;
 
     background-image: var(--image);
@@ -153,8 +156,16 @@ body {
       background-color: #000;
     }
 
+    &_title {
+      font-size: 24px;
+    }
+
     &_subtitle {
       opacity: 0.8;
+    }
+
+    &_content {
+      min-height: 100vh;
     }
 
     .main-content {
@@ -169,6 +180,7 @@ body {
 
         &.last {
           border: none;
+          margin-bottom: 50px;
         }
 
         &:not(.last) {
@@ -199,9 +211,11 @@ body {
     }
   }
 
-  .last .card-text {
-    font-size: 18px;
-    // font-weight: bold;
+  .last {
+    .card-text {
+      font-size: 18px;
+      // font-weight: bold;
+    }
   }
 
   @media screen and (max-width: 767px) {
