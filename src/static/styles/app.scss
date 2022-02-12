@@ -170,7 +170,8 @@ body {
     }
 
     .main-content {
-      min-height: 200px;
+      min-height: 10px;
+      flex: none;
 
       .card {
         width: 100%;

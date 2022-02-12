@@ -1,23 +1,23 @@
 import React, { useEffect, useRef } from 'react';
 import { Card } from 'react-bootstrap';
+import { animateScroll } from 'react-scroll';
 
 const GenQoutes = ({ className = '', texts = [] }) => {
-    const qouteRef = useRef(null);
+    const scrollRef = useRef(null);
 
     useEffect(() => {
-        if (qouteRef && texts.length) {
-            const postion = qouteRef.current.getBoundingClientRect();
-            if (window.outerHeight < postion.bottom + 200) {
-                window.scrollTo(0, postion.bottom + 500);
-                console.log('first');
+        if (scrollRef && texts.length) {
+            const postion = scrollRef.current.getBoundingClientRect();
+            if (window.outerHeight < postion.bottom + 50) {
+                animateScroll.scrollToBottom();
             }
-            console.log('body', window.outerHeight);
-            console.log('scroll', postion);
+            // console.log('body', window.innerHeight);
+            // console.log('scroll', postion);
         }
-    }, [qouteRef, texts]);
+    }, [scrollRef, texts]);
 
     return (
-        <div className={`qoutes ${className}`} ref={qouteRef}>
+        <div className={`qoutes ${className}`}>
             {texts.length
                 ? texts.map((item) => (
                       <Card
@@ -31,6 +31,8 @@ const GenQoutes = ({ className = '', texts = [] }) => {
                       </Card>
                   ))
                 : ''}
+
+            <div className="dummyscroll" style={{ float: 'left', clear: 'both' }} ref={scrollRef} />
         </div>
     );
 };
