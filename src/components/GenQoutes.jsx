@@ -6,10 +6,10 @@ const GenQoutes = ({ className = '', texts = [] }) => {
 
     useEffect(() => {
         if (useDummyScroll && texts.length) {
-            console.log(useDummyScroll);
-            useDummyScroll.current.scrollIntoView({
-                behavior: 'smooth',
-            });
+            const postion = useDummyScroll.current.getBoundingClientRect();
+            window.scrollTo(0, postion.top - 30);
+
+            // console.log(postion.top - 30);
         }
     }, [useDummyScroll, texts]);
 
