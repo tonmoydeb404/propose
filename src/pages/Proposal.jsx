@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import GenQoutes from '../components/GenQoutes';
@@ -15,20 +15,10 @@ const Proposal = ({ className = '' }) => {
         subtext: 'I want to tell you something',
     });
 
-    const useDummyScroll = useRef(null);
-
     const addQoutes = () => {
         const qoute = texts.length >= qoutes.length ? propose : genRandom(qoutes, texts);
         setCurrentText((prevData) => ({ ...prevData, ...qoute }));
         setTexts((prevData) => [...prevData, qoute]);
-
-        if (useDummyScroll) {
-            useDummyScroll.current.scrollIntoView({
-                behavior: 'smooth',
-                block: 'nearest',
-                inline: 'start',
-            });
-        }
     };
 
     return (
@@ -51,8 +41,6 @@ const Proposal = ({ className = '' }) => {
                             </div>
 
                             <GenQoutes texts={texts} className="main-content" />
-
-                            <div className="dummyscroll w-100" ref={useDummyScroll} />
 
                             {currentText.id !== 'finished' ? (
                                 <Button variant="danger" onClick={addQoutes}>
