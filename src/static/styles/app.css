@@ -16,7 +16,6 @@ body {
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
 }
 
 /* hero section */
@@ -212,6 +211,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 5px;
+  overflow: hidden;
 }
 
 .qoutes .animIn {

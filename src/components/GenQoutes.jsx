@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import { Card } from 'react-bootstrap';
-import { animateScroll } from 'react-scroll';
 
 const GenQoutes = ({ className = '', texts = [] }) => {
     const scrollRef = useRef(null);
@@ -9,7 +8,7 @@ const GenQoutes = ({ className = '', texts = [] }) => {
         if (scrollRef && texts.length) {
             const postion = scrollRef.current.getBoundingClientRect();
             if (window.outerHeight < postion.bottom + 50) {
-                animateScroll.scrollToBottom();
+                scrollRef.current.scrollIntoView({ behavior: 'smooth' });
             }
             // console.log('body', window.innerHeight);
             // console.log('scroll', postion);

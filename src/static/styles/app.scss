@@ -15,7 +15,6 @@ body {
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
 }
 
 /* hero section */
@@ -201,6 +200,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  overflow: hidden;
 
   .animIn {
     animation: animIn 0.5s ease-in;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import GenQoutes from '../components/GenQoutes';
@@ -20,6 +20,10 @@ const Proposal = ({ className = '' }) => {
         setCurrentText((prevData) => ({ ...prevData, ...qoute }));
         setTexts((prevData) => [...prevData, qoute]);
     };
+
+    useEffect(() => {
+        document.title = `${person} - Be My Valentine`;
+    }, [person]);
 
     return (
         <div
