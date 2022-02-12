@@ -1,0 +1,35 @@
+{
+  "qoutes": [
+    {
+      "id": "Q2",
+      "text": "Found the reason for my smile, the day I found you. Will you let me be the reason for your smile?",
+      "image": "/images/image-03.jpg"
+    },
+    {
+      "id": "Q3",
+      "text": "In you, my life becomes whole, with you my days become bright. In your hands I would love to lay, this night and for the rest of my life!",
+      "image": "/images/image-02.jpg"
+    },
+    {
+      "id": "Q4",
+      "text": "You deserve the world and all the good things it has to offer. If I fail to find that world for you, I promise to give you mine!",
+      "image": "/images/image-01.jpg"
+    },
+    {
+      "id": "Q5",
+      "text": "When the rain is blowing in your face and the whole world is on your case, I could offer you a warm embrace to make you feel my love.",
+      "image": "/images/image-07.jpg"
+    },
+    {
+      "id": "Q6",
+      "text": "Hold my hand tight as I want to grow old with you from this day forth.",
+      "image": "/images/image-06.jpg"
+    }
+  ],
+  "propose": {
+    "id": "finished",
+    "text": "I love you damn",
+    "subtext": "That's all I will wait for your reply",
+    "image": "/images/image-04.jpg"
+  }
+}
