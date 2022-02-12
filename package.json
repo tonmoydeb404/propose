@@ -21,8 +21,8 @@
     "react-router-dom": "^6.2.1"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.16.5",
-    "@babel/preset-react": "^7.16.5",
+    "@babel/eslint-parser": "^7.17.0",
+    "@babel/preset-react": "^7.16.7",
     "@vitejs/plugin-react": "^1.0.7",
     "eslint": "^8.2.0",
     "eslint-config-airbnb": "19.0.2",
