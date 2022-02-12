@@ -1,13 +1,13 @@
-# React Boilerplate
+# Propose Your Valentine
 
-this is a react boilerplate with linting support. this boilerplate helps you to make a quick **react** project setup. click on **Use this template** button to create your next project with this template.
+live at: https://proposeme.netlify.app/
 
 ### or use manually
 
 give _yarn_ or _npm install_ command to install all required packages.
 
 ```javascript
-yarn // npm install
+yarn; // npm install
 ```
 
 use _lint_ script to install all updated linting packages.
@@ -21,10 +21,3 @@ then give _yarn dev_ or _npm run dev_ to start the developer server.
 ```javascript
 yarn dev // npm run dev
 ```
-
-
-### things are used
-
-- Vite JS (frontend tool)
-- EsLint
-- Prettier
