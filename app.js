@@ -103,6 +103,11 @@ function popupClose() {
     popupInput.value = "";
 }
 
+function submitForm(e) {
+    e.preventDefault();
+    generate();
+}
+
 // CALLING THIS FUNCTION
 
 next.addEventListener('click', load);
