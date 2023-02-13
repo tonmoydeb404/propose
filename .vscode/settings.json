@@ -7,7 +7,11 @@
   "[markdown]": {
     "editor.unicodeHighlight.ambiguousCharacters": false,
     "editor.wordWrap": "on",
-    "editor.quickSuggestions": true
+    "editor.quickSuggestions": {
+      "comments": "on",
+      "strings": "on",
+      "other": "on"
+    }
   },
   "[javascript]": {
     "editor.formatOnSave": false,
@@ -15,7 +19,7 @@
   },
   "[javascriptreact]": {
     "editor.formatOnSave": false,
-    "editor.defaultFormatter": null
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "javascript.validate.enable": false, //disable all built-in syntax checking
   "editor.codeActionsOnSave": {
