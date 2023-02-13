@@ -32,6 +32,12 @@ body {
     align-items: center;
   }
 
+  &_credit {
+    font-size: 13px;
+    margin-top: 10px;
+    color: #444;
+  }
+
   &_text {
     &-title {
       font-weight: bold;

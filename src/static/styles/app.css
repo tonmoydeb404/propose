@@ -30,6 +30,11 @@ body {
 .hero_content {
   align-items: center;
 }
+.hero_credit {
+  font-size: 13px;
+  margin-top: 10px;
+  color: #444;
+}
 .hero_text-title {
   font-weight: bold;
   font-size: 50px;
