@@ -23,6 +23,21 @@ const Proposal = ({ className = '' }) => {
         setTexts((prevData) => [...prevData, qoute]);
     };
 
+    // handle click
+    const handleClick = (e) => {
+        const button = e.target;
+        // remove previous shaking effect
+        button.classList.remove('shake');
+        // add quote
+        addQoutes();
+        // add shaking effect
+        button.classList.add('shake');
+        // remove shaking effect
+        setTimeout(() => {
+            button.classList.remove('shake');
+        }, 1000);
+    };
+
     // effects
     useEffect(() => {
         document.title = `${person} - Be My Valentine`;
@@ -58,7 +73,7 @@ const Proposal = ({ className = '' }) => {
                             <GenQoutes texts={texts} className="main-content" />
 
                             {currentText.id !== 'finished' ? (
-                                <Button variant="danger" onClick={addQoutes}>
+                                <Button variant="danger" onClick={handleClick}>
                                     {texts.length ? 'Next' : 'Continue'}
                                 </Button>
                             ) : (

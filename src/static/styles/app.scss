@@ -130,6 +130,7 @@ body {
 
     .main-content {
       flex: 1;
+      transition: height 0.25s linear;
     }
   }
 
@@ -168,7 +169,7 @@ body {
     }
 
     .main-content {
-      min-height: 10px;
+      min-height: 100px;
       flex: none;
 
       .card {
@@ -234,4 +235,24 @@ body {
       font-size: 15px;
     }
   }
+}
+
+// shaking effect
+@keyframes shaker {
+  0% {
+    -webkit-transform: translate(3px, 0);
+  }
+  50% {
+    -webkit-transform: translate(-3px, 0);
+  }
+  100% {
+    -webkit-transform: translate(3px, 0);
+  }
+}
+
+.shake {
+  animation-name: shaker;
+  animation-duration: 0.1s;
+  transform-origin: 50% 50%;
+  animation-timing-function: linear;
 }

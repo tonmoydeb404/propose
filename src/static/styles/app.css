@@ -105,6 +105,7 @@ body {
 }
 .proposal_content .main-content {
   flex: 1;
+  transition: height 0.25s linear;
 }
 @media screen and (max-width: 767px) {
   .proposal {
@@ -138,7 +139,7 @@ body {
     min-height: 100vh;
   }
   .proposal .main-content {
-    min-height: 10px;
+    min-height: 100px;
     flex: none;
   }
   .proposal .main-content .card {
@@ -189,4 +190,22 @@ body {
   .qoutes .card-text {
     font-size: 15px;
   }
+}
+
+@keyframes shaker {
+  0% {
+    -webkit-transform: translate(3px, 0);
+  }
+  50% {
+    -webkit-transform: translate(-3px, 0);
+  }
+  100% {
+    -webkit-transform: translate(3px, 0);
+  }
+}
+.shake {
+  animation-name: shaker;
+  animation-duration: 0.1s;
+  transform-origin: 50% 50%;
+  animation-timing-function: linear;
 }/*# sourceMappingURL=app.css.map */
