@@ -4,7 +4,7 @@ import { Button, Form, InputGroup, Modal, OverlayTrigger, Tooltip } from 'react-
 
 const Message = (props) => <Tooltip {...props}>copied</Tooltip>;
 
-const LinkModal = ({ className = '', person = null, show = false, onHide = () => {} }) => {
+const LinkModal = ({ className = '', person = null, show = false, hide = () => {} }) => {
     const [proposeLink, setProposeLink] = useState(false);
     const [copied, setCopied] = useState(false);
 
@@ -31,12 +31,11 @@ const LinkModal = ({ className = '', person = null, show = false, onHide = () =>
         );
     };
 
-    return proposeLink && typeof proposeLink === 'string' ? (
+    return (
         <Modal
             className={className}
             onHide={() => {
-                onHide();
-                setProposeLink(false);
+                hide();
             }}
             show={show}
             backdrop="static"
@@ -71,8 +70,6 @@ const LinkModal = ({ className = '', person = null, show = false, onHide = () =>
                 </InputGroup>
             </Modal.Body>
         </Modal>
-    ) : (
-        ''
     );
 };
 
