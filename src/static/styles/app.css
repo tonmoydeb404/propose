@@ -3,8 +3,7 @@
 *::before {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -22,51 +21,30 @@ body {
 .hero {
   width: 100%;
   min-height: 100vh;
-  max-height: -webkit-fit-content;
-  max-height: -moz-fit-content;
   max-height: fit-content;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
-
 .hero_content {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .hero_text-title {
   font-weight: bold;
   font-size: 50px;
 }
-
 .hero_text-form {
   width: 80%;
 }
-
 @media screen and (max-width: 1399px) {
   .hero_text-title {
     font-size: 40px;
   }
 }
-
 @media screen and (max-width: 767px) {
   .hero_content {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    flex-direction: column-reverse;
     gap: 30px;
   }
   .hero_text-title {
@@ -76,7 +54,6 @@ body {
     width: 70%;
   }
 }
-
 @media screen and (max-width: 575px) {
   .hero_media {
     width: 80%;
@@ -90,17 +67,14 @@ body {
   font-size: 18px;
   font-family: inherit;
 }
-
 .form_btn {
   font-size: 18px;
 }
-
 .form_btn_icon {
   width: 20px;
   height: auto;
   margin-left: 10px;
 }
-
 @media screen and (max-width: 1399px) {
   .form_field {
     font-size: 16px;
@@ -120,30 +94,18 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  -webkit-box-shadow: inset -5px 0px 10px 2px rgba(0, 0, 0, 0.3);
-          box-shadow: inset -5px 0px 10px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: inset -5px 0px 10px 2px rgba(0, 0, 0, 0.3);
 }
-
 .proposal_content {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   min-height: 95vh;
   gap: 20px;
 }
-
 .proposal_content .main-content {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  min-height: 600px;
+  flex: 1;
 }
-
 @media screen and (max-width: 767px) {
   .proposal {
     background-image: var(--image);
@@ -177,9 +139,7 @@ body {
   }
   .proposal .main-content {
     min-height: 10px;
-    -webkit-box-flex: 0;
-        -ms-flex: none;
-            flex: none;
+    flex: none;
   }
   .proposal .main-content .card {
     width: 100%;
@@ -193,52 +153,30 @@ body {
   }
   .proposal .main-content .card:not(.last) {
     background-color: rgba(255, 255, 255, 0.15);
-    -webkit-box-shadow: 0 0 25px 0 rgba(255, 255, 255, 0.15);
-            box-shadow: 0 0 25px 0 rgba(255, 255, 255, 0.15);
-    -webkit-backdrop-filter: blur(4px);
-            backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
 }
 
 .qoutes {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 5px;
   overflow: hidden;
 }
-
 .qoutes .animIn {
-  -webkit-animation: animIn 0.5s ease-in;
-          animation: animIn 0.5s ease-in;
+  animation: animIn 0.5s ease-in;
 }
-
-@-webkit-keyframes animIn {
-  from {
-    -webkit-transform: translateX(100px);
-            transform: translateX(100px);
-    opacity: 0.7;
-  }
-}
-
 @keyframes animIn {
   from {
-    -webkit-transform: translateX(100px);
-            transform: translateX(100px);
+    transform: translateX(100px);
     opacity: 0.7;
   }
 }
-
 .qoutes .last .card-text {
   font-size: 18px;
 }
-
 @media screen and (max-width: 767px) {
   .qoutes {
     gap: 10px;
@@ -247,10 +185,8 @@ body {
     padding: 10px 12px;
   }
 }
-
 @media screen and (max-width: 575px) {
   .qoutes .card-text {
     font-size: 15px;
   }
-}
-/*# sourceMappingURL=app.css.map */
+}/*# sourceMappingURL=app.css.map */
