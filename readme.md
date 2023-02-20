@@ -1,6 +1,6 @@
 # Propose Your Valentine
 
-a lovely web template for couples who want to share their feelings with their special persons.
+a lovely web template for couples who want to share their feelings with their special person.
 
 live at: https://proposeme.netlify.app/
 
