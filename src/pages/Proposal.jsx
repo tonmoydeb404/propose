@@ -72,12 +72,10 @@ const Proposal = ({ className = '' }) => {
 
                             <GenQoutes texts={texts} className="main-content" />
 
-                            {currentText.id !== 'finished' ? (
+                            {currentText.id !== 'finished' && (
                                 <Button variant="danger" onClick={handleClick}>
                                     {texts.length ? 'Next' : 'Continue'}
                                 </Button>
-                            ) : (
-                                ''
                             )}
                         </div>
                     </Col>
