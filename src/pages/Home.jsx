@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import ProposeForm from '../components/ProposeForm';
+import ProposeModal from '../components/ProposeModal';
 import Image from '../static/images/hero.svg';
 
 const Home = ({ className = '' }) => (
@@ -16,7 +16,7 @@ const Home = ({ className = '' }) => (
                             don’t worry I am here to help you. enter your valentines name and generate a propose link.
                         </p>
 
-                        <ProposeForm className="hero_text-form mt-4 mt-md-5" />
+                        <ProposeModal />
                         <p className="hero_credit">
                             developed by{' '}
                             <a

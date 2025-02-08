@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { useParams, useSearchParams } from 'react-router-dom';
 import GenQoutes from '../components/GenQoutes';
 import { images } from '../data/preload-image-list.json';
 import { propose, qoutes } from '../data/quotes.json';
@@ -8,6 +8,8 @@ import { genRandom } from '../utills';
 
 const Proposal = ({ className = '' }) => {
     const { id } = useParams();
+    const [ searchParams ] = useSearchParams()
+    const reply = searchParams.get('reply')
     const person = id.split('-').join(' ');
 
     const [texts, setTexts] = useState([]);
@@ -72,12 +74,16 @@ const Proposal = ({ className = '' }) => {
 
                             <GenQoutes texts={texts} className="main-content" />
 
-                            {currentText.id !== 'finished' ? (
+                            {currentText.id !== 'finished' && (
                                 <Button variant="danger" onClick={handleClick}>
                                     {texts.length ? 'Next' : 'Continue'}
                                 </Button>
-                            ) : (
-                                ''
+                            )}
+
+                            {currentText.id === 'finished' && reply && (
+                                <Button variant="danger" href={reply} target="_blank">
+                                    Reply Back
+                                </Button>
                             )}
                         </div>
                     </Col>
