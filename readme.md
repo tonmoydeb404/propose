@@ -2,7 +2,8 @@
 
 a lovely web template for couples who want to share their feelings with their special person.
 
-live at: https://proposeme.netlify.app/
+v1: https://tonmoydeb404.github.io/propose
+v2: https://proposeme.netlify.app/
 
 ## How to use it?
 
