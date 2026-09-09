@@ -1,39 +1,27 @@
 {
-  "name": "propose",
-  "version": "2.0",
-  "license": "MIT",
-  "author": {
-    "name": "Tonmoy Deb",
-    "email": "tonmoydeb404@gmail.com"
-  },
+  "name": "v2",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "lint": "yarn add -D prettier && yarn add -D @babel/eslint-parser @babel/preset-react && npx install-peerdeps --dev eslint-config-airbnb && yarn add -D eslint-config-prettier eslint-plugin-prettier"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
   },
   "dependencies": {
-    "@heroicons/react": "^2.2.0",
-    "bootstrap": "5.3.3",
-    "react": "^19.0.0",
-    "react-bootstrap": "^2.10.9",
-    "react-dom": "^19.0.0",
-    "react-router-dom": "^7.1.5"
+    "next": "16.3.4",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.26.8",
-    "@babel/preset-react": "^7.26.3",
-    "@vitejs/plugin-react": "^4.3.4",
-    "eslint": "^9.20.0",
-    "eslint-config-airbnb": "19.0.4",
-    "eslint-config-prettier": "^10.0.1",
-    "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-prettier": "^5.2.3",
-    "eslint-plugin-react": "^7.37.4",
-    "eslint-plugin-react-hooks": "^5.1.0",
-    "prettier": "^3.4.2",
-    "vite": "^6.4.1",
-    "vite-plugin-html": "^3.2.2"
-  }
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.4",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "packageManager": "pnpm@10.33.4"
 }
