@@ -35,6 +35,5 @@
     "prettier": "^3.4.2",
     "vite": "^6.4.1",
     "vite-plugin-html": "^3.2.2"
-  },
-  "packageManager": "yarn@1.22.22"
+  }
 }
