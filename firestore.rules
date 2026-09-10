@@ -1,0 +1,35 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return isSignedIn() && request.auth.uid == uid;
+    }
+
+    match /users/{uid} {
+      allow read, write: if isOwner(uid);
+    }
+
+    match /pages/{pageId} {
+      // public capability-link read, same trust model as today's public slugs
+      allow get: if true;
+      // dashboard listing must be scoped to the caller's own pages via a where("ownerUid", "==", uid) query
+      allow list: if isSignedIn() && request.query.where[0][0] == "ownerUid" && request.query.where[0][2] == request.auth.uid;
+
+      allow create: if isOwner(request.resource.data.ownerUid)
+        && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.pageCount < 5;
+
+      allow update, delete: if isOwner(resource.data.ownerUid);
+
+      match /feedback/{feedbackId} {
+        allow create: if true;
+        allow update, delete: if false;
+        allow read: if isOwner(get(/databases/$(database)/documents/pages/$(pageId)).data.ownerUid);
+      }
+    }
+  }
+}
